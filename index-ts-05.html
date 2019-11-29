@@ -1,3 +1,6 @@
-
-<script src="https://raw.githubusercontent.com/phoboslab/jsmpeg/master/jsmpeg.min.js"></script>
-<div class="jsmpeg" data-url="http://kopenhagen-ts.ccindex.cn/rtmp-fur/stream2.ts"></div>
+<div id="videoWrapper"></div>
+<script src="http://jsmpeg.com/jsmpeg.min.js"></script>
+<script>
+  var videoUrl = 'http://kopenhagen-ts.ccindex.cn/rtmp-fur/stream2.ts';
+  new JSMpeg.VideoElement('#videoWrapper', videoUrl);
+</script>
