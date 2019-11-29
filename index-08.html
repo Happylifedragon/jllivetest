@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ChinaCache RTMP Streaming</title>
+    <link href="//vjs.zencdn.net/7.2.4/video-js.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1>ChinaCache RTMP Streaming</h1>
+    <video id=example-video width=890 height=500 class="video-js vjs-default-skin" controls></video>
+    <script src="//vjs.zencdn.net/7.2.4/video.js"></script>
+
+  <link rel="stylesheet" href="//googleads.github.io/videojs-ima/node_modules/video.js/dist/video-js.min.css" />
+  <link rel="stylesheet" href="//googleads.github.io/videojs-ima/node_modules/videojs-contrib-ads/dist/videojs.ads.css" />
+    <link rel="stylesheet" href="//googleads.github.io/videojs-ima/dist/videojs.ima.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-flash/2.1.2/videojs-flash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@brightcove/videojs-flashls-source-handler@1.4.5/dist/videojs-flashls-source-handler.min.js"></script>
+
+    <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script src="//googleads.github.io/videojs-ima/node_modules/videojs-contrib-ads/dist/videojs.ads.min.js"></script>
+    <script src="//googleads.github.io/videojs-ima/dist/videojs.ima.js"></script>
+
+  <script>
+    var player = videojs('example-video');
+
+    player.ready(function() {
+      player.src({
+        src: "rtmp://nuskin-play-rtmp.ccindex.cn/nuskin/stream1",
+        type: 'rtmp/mp4',
+      });
+
+    //  player.ima({
+    //    id: 'example-video',
+    //  adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator='
+    //});
+//      player.play();
+    });
+    </script>
+  </body>
+</html>
